@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1 Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #6c757d;
+        --card-radius: 12px;
+      }
+      body {
+        background-color: #f8f9fa;
+      }
+      .nav-link:hover {
+        color: black;
+      }
+      header {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 10px 15px;
+      }
+      .card {
+        border-radius: var(--card-radius);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="d-flex justify-content-between align-items-center">
+      <h4 class="m-0">My Dashboard</h4>
+      <!-- Toggle button for mobile -->
+      <button
+        class="btn btn-light d-md-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+      >
+        ☰
+      </button>
+      <button class="btn btn-light btn-sm d-none d-md-inline">Sign out</button>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="col-md-2 bg-white p-3 collapse d-md-block">
+          <ul class="nav flex-column gap-2 link">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#" class="nav-link">Profile</a></li>
+            <li><a href="#" class="nav-link">Messages</a></li>
+            <li><a href="#" class="nav-link">Settings</a></li>
+          </ul>
+        </nav>
+
+        <!-- Main content -->
+        <main class="col-md-10 p-4">
+          <!-- Section: Welcome -->
+          <section class="mb-4">
+            <h2>Welcome Back 👋</h2>
+            <p class="text-muted">Here’s your dashboard overview</p>
+          </section>
+
+          <!-- Section: Cards -->
+          <section class="row g-3 mb-4">
+            <article class="col-md-6">
+              <div class="card p-3 text-center">
+                <h6>Engagement</h6>
+                <h3>8,400</h3>
+              </div>
+            </article>
+            <article class="col-md-6">
+              <div class="card p-3 text-center">
+                <h6>Sales</h6>
+                <h3>$2,450</h3>
+              </div>
+            </article>
+          </section>
+
+          <!-- Section: Statistics Table -->
+          <section>
+            <div class="card p-4">
+              <h6 class="mb-3">Statistics</h6>
+              <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                  <thead class="table-primary">
+                    <tr>
+                      <th>Month</th>
+                      <th>Users</th>
+                      <th>Sales</th>
+                      <th>Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>January</td>
+                      <td>500</td>
+                      <td>120</td>
+                      <td>$2,000</td>
+                    </tr>
+                    <tr>
+                      <td>February</td>
+                      <td>800</td>
+                      <td>200</td>
+                      <td>$3,200</td>
+                    </tr>
+                    <tr>
+                      <td>March</td>
+                      <td>950</td>
+                      <td>250</td>
+                      <td>$4,500</td>
+                    </tr>
+                    <tr>
+                      <td>April</td>
+                      <td>1200</td>
+                      <td>300</td>
+                      <td>$5,800</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
